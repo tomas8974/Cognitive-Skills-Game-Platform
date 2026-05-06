@@ -10,9 +10,9 @@ A web-based platform for improving cognitive skills through games. The platform 
 
 Users can create an account, play games across different cognitive domains, and track their weekly progress through interactive charts.
 
-[Demo (Youtube)](https://youtu.be/JFUmXtkABJ0)
+## Demo
 
----
+[Demo (Youtube)](https://youtu.be/JFUmXtkABJ0)
 
 ## Games
 
