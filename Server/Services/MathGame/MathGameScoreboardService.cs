@@ -21,8 +21,7 @@ namespace Projektas.Server.Services.MathGame
         public async Task<UserScoreDto<MathGameData>> GetUserHighscoreAsync(string username)
         {
             var scores = await _scoreRepository.GetHighscoreFromUserAsync<MathGameData>(username);
-
-            return scores.OrderByDescending(s => s.GameData.Scores).First();
+            return scores.OrderByDescending(s => s.GameData.Scores).FirstOrDefault();
         }
 
         public async Task<List<UserScoreDto<MathGameData>>> GetTopScoresAsync(int topCount)

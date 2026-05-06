@@ -36,7 +36,17 @@ namespace Projektas.Server.Controllers {
 
         [HttpGet("highscore")]
         public async Task<ActionResult<UserScoreDto<MathGameData>?>> GetUserHighscoreAsync([FromQuery] string username) {
-            return await _scoreboardService.GetUserHighscoreAsync(username);
+            var highscore = await _scoreboardService.GetUserHighscoreAsync(username);
+            if (highscore == null)
+            {
+                return Ok(new UserScoreDto<MathGameData>
+                {
+                    Username = username,
+                    GameData = new MathGameData { Scores = 0 },
+                    Timestamp = DateTime.UtcNow
+                });
+            }
+            return Ok(highscore);
         }
 
         [HttpGet("top-score")]
