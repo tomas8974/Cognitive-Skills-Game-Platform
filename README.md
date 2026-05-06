@@ -2,7 +2,7 @@
 
 **Team members:** Tomas Kazonas, Artiom Garbul, Linas Baužys
 
-This project was part of the Software Engineering 1 course at Vilnius University.
+This project was part of the Software Engineering 1 course at Vilnius University in 2024 Autumn semester.
 
 ## Project Description
 
